@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: reto-deployment-maubohor
+  name: reto-deployment-maubohor
+  namespace: retok8s-maubohor
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: reto-deployment-maubohor
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: reto-deployment-maubohor
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
